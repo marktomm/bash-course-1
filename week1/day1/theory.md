@@ -14,12 +14,15 @@ its hardware-based ancestors.
 
 ### Shell: More Than a Command Interpreter
 - **Definition**: A shell is a specialized program designed to read commands and execute them. It serves as an intermediary between the user and the operating system.
+- **Shell goal as a program**: Provide a way for user (you) to launch programs by writing "code" (program_name followed by space and any arguments)
 - **Workflow**: 
   1. Reads character strings from the terminal (or another source).
   2. Treats the first word up to a space as a command.
   3. Treats the words following the first as arguments.
   4. Executes the command, usually by forking and running a new process, passing along the arguments.
-- **Role in Terminal**: When a terminal starts, it often runs a shell program. The shell is like an application running "inside" or "on top of" the terminal, much like an app running on your smartphone.
+- **Connection with Terminal**: When a terminal starts, it is associated with a *special* file (called character device file).
+This file serves as a communication channel, providing input and output. The terminal enables echoing back 
+to the user in that *special* file. A shell process is then initiated and attached to the same file.
 
 ### The Interrelationship: Terminal and Shell
 - **Terminal as an I/O Mechanism**: Terminal handles I/O, feeding user input to the shell, and displaying output from the shell.

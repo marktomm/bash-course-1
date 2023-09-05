@@ -5,15 +5,12 @@ The objective of today's lesson is to provide a comprehensive understanding of w
 
 ### Terminal: A Deep Dive
 - **Historical Context**: Originally, a terminal was a physical device—a screen and keyboard connected to a mainframe. Think of it as a remote control to a more powerful machine.
-- **Modern Analogy**:Today's terminal is like a chat interface between you and the OS. You type
-commands and the system responds, similar to a chat. It's a software-based 
-channel for two-way communication, serving the same fundamental purpose as
-its hardware-based ancestors.
+- **Modern Analogy**:Today's terminal is like a chat interface between you and the OS. Which means that it just sends the messages back and forth. You type commands and the OS responds, similar to a chat.
 - **Device File Representation**: In Linux, the terminal is abstracted as a device file that can accept and send characters. For example, `/dev/tty` for hardware terminals or `/dev/pts/0` for emulated terminals.
 - **Functional Description**: A terminal essentially enables programs to read characters from the keyboard and send characters to display on the screen.
 
 ### Shell: More Than a Command Interpreter
-- **Definition**: A shell is a specialized program designed to read commands and execute them. It serves as an intermediary between the user and the operating system.
+- **Definition**: A shell is a specialized program designed to read commands and execute them. It serves as an intermediary between the user and the OS.
 - **Shell goal as a program**: Provide a way for user (you) to launch programs by writing "code" (program_name followed by space and any arguments)
 - **Workflow**: 
   1. Reads character strings from the terminal (or another source).

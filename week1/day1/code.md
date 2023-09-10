@@ -10,6 +10,10 @@ for more advanced tasks.
 - Terminal access
 - Basic understanding of terminal and shell as provided in the theory session
 
+### If doing this as homework
+
+Type in all the code below into the terminal. If some command returns an error or seems out of order note it. Copy paste your command along with the error or strange output to a file and save for further inspection.
+
 ### Task 1: Navigating the Filesystem
 #### Description:
 Begin by teaching the `cd` and `pwd` commands. Have the student navigate to 

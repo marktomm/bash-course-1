@@ -1,4 +1,4 @@
-## Week 1, Day 1: Practice with Tutor
+## Week 1, Day 1: Homework/Practice with Tutor
 
 ### Objective
 The objective of the practical session is to help students navigate and 

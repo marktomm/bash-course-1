@@ -14,15 +14,49 @@ also explore script files: how to create, source, and execute them.
 - **Purpose**: The `$` symbol is used in Bash to indicate a variable.
 
   **Example TO SET PROCESS LOCAL VARIABLE**:
-  `variable="hello"`
-  `echo $variable`
+```shell
+variable="hello"
+echo $variable
+```
   Output: `hello`
 
-### Processes in Shell
+- **Note on `=` Symbol**: The `=` symbol is another special character in the context of variable assignment. 
+  It tells the shell that the string immediately preceding it is a variable name, and the string immediately 
+  following it is the value to assign to that variable. It is crucial that there are no spaces around the `=` symbol 
+  for proper variable assignment. For instance, `variable="hello"` is a valid assignment, while `variable = "hello"` 
+  would be incorrect and would cause Bash to attempt to execute `variable` as a command with `=` and `"hello"` as arguments.
+
+
+### Understanding Script Files
+
+#### Real-World Narrative: Automated Setup to begin working on the course
+
+You, a Bash course student, need to set up your Linux workstation environment
+before every lesson. To automate this task, you can create a file with command per each row. 
+This file is called a script file.
+
+```shell
+# setup_bash_course.sh
+echo "Setting up work..."
+cd ~/bash-course-1/
+git pull
+code . # or vsc . on Kali
+```
+
+#### Creating Script Files
+
+- Use `touch` to create an empty script file, and make it executable using `chmod`.
+
+```shell
+touch setup_bash_course.sh
+chmod +x setup_bash_course.sh # bc file permissions
+```
+
+### Processes in OS
 
 #### Understanding Processes
 
-- **Processes in a Shell**: The shell is a process itself and spawns other processes when commands are executed.
+- **Shell is a process**: The shell is a process itself and spawns(forks) other processes when commands are executed.
 - **Parent-Child Relationship**: Each spawned process is a child of the shell process.
 
 #### ASCII Graphics Visualization
@@ -38,59 +72,51 @@ PID: Process ID
   │       └─── gnome-shell (PID 1200)
   │           └─── gnome-terminal-server (PID 1300)
   │               └─── bash (PID 1400) [Local variable: variable="hello"]
-  │                   ├─── command1 (PID 1401)
-  │                   └─── command2 (PID 1402)
+  │                   └─── command1 (PID 1401)
   └─── other services and processes
-
 ```
 
 ```
 init (PID 1)
 ├─── ...
-    └─── bash (PID 50) [Local variable: variable="hello"]
-        ├─── command1 (PID 51)
-        └─── command2 (PID 52)
+    └─── bash (PID 1400) [Local variable: variable="hello"]
+        └─── command1 (PID 1401)
 ```
 
 ```shell
-# pro tip: run ps command with argument aux to view current processes on your machine and their PID (Process ID)
-ps aux
+# pro tip: run ps command with arguments -aux to view current processes on your machine and their PID (Process ID)
+ps -aux
 ```
 
-### Understanding Script Files
+### Passing variables to child process
 
-#### Real-World Narrative: Automated Work Environment Setup
+```shell
+variable2="world"
+export variable2
+```
 
-John, a DevOps engineer, needs to set up his Linux workstation environment
-every morning when he logs in. To automate this task, he has created a script
-file with all the necessary commands.
-
-`# setup_environment.sh`
-`echo "Setting up environment..."`
-`cd ~/work_project/`
-`git pull origin master`
-`./build.sh`
-
-#### Creating Script Files
-
-- Use `touch` to create an empty script file, and make it executable using `chmod`.
-
-  `touch setup_environment.sh`
-  `chmod +x setup_environment.sh`
+```
+init (PID 1)
+├─── ...
+    └─── bash (PID 1400) [Local variable: variable="hello", Exported variable: variable2="world"]
+        └─── command1 (PID 1401) [Inherited variable: variable2="world"]
+```
 
 #### Sourcing vs. Executing Script Files
 
 - **Sourcing**: Executes the commands in the current shell session. Any changes
   to environment variables will be retained.
 
-  `source setup_environment.sh`
-  `# or`
-  `. setup_environment.sh`
+```shell
+source setup_bash_course.sh
+# or
+. setup_bash_course.sh
+```
 
 - **Executing**: Spawns a new shell to run the script. Environment changes are
   lost when the new shell exits.
 
-  `./setup_environment.sh`
+  `./setup_bash_course.sh`
 
 ### Commands to be Covered
 

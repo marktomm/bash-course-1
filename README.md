@@ -2,7 +2,7 @@
 
 ### Week 1
 - Day 1: Introduction to Terminal and Shell. Understanding historical transition from TTYs to PTYs, and the purpose of the shell. Commands: `echo`,`pwd`,`cd`,`ls`,`mkdir`,`rmdir`,`rm`,`touch`,`cat`,`more`,`less`,`file`,`alias`.
-- Day 2: Introduction to Processes. Learning about devices as files, shared memory, and sockets. Commands: `ps`, `top`.
+- Day 2: Introduction to Bash Special Characters, Variables, and Processes. Learning about devices as files, shared memory, sockets, and the use of special characters in variable assignment. Understanding the anatomy of Bash script files. Commands: `export`, `unset`, `echo $SHELL`, `echo $PWD`, `ps`, `pstree`.
 
 ### Week 2
 - Day 1: Special Shell Characters. Understanding special characters like (,),$,* and how quotes affect them. Commands: `echo`, escape sequences.

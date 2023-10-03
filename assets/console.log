@@ -1,0 +1,235 @@
+2023-10-03 14:04:04.358 [INFO] telem-agc.Port1.port - Listening for connections on 0.0.0.0:5700
+2023-10-03 14:04:04.359 [INFO] telem-agc.Port1 - Protocol initialized
+2023-10-03 14:04:05.358 [INFO] telem-agc.Formula.db - FirstCalculation
+2023-10-03 14:04:05.358 [INFO] telem-agc.Port1 - Gateway initialized
+2023-10-03 14:04:05.358 [INFO] telem-agc.WebServer - Gateway initialized
+2023-10-03 14:04:05.358 [INFO] telem-agc.GatewaySetup - Configure time CGateway Init Done, time from start (0.205322)
+2023-10-03 14:04:09.063 [TRACE] telem-agc.Port1.port - Clear communication buffers
+2023-10-03 14:04:09.063 [INFO] telem-agc.Port1.port - Incoming connection from 172.16.0.192 established.
+2023-10-03 14:04:09.063 [TRACE] telem-agc.Port1.port.link - Port connected
+2023-10-03 14:04:09.063 [INFO] telem-agc.Port1 - Port open!
+2023-10-03 14:04:09.063 [DEBUG] telem-agc.Port1 - Retry/Establish communication
+2023-10-03 14:04:09.064 [TRACE] telem-agc.Port1.port.read -  68 04 07 00 00 00
+2023-10-03 14:04:09.068 [INFO] telem-agc.Port1 - Reset communication done
+2023-10-03 14:04:09.072 [DEBUG] telem-agc.Port1.port.read.link - UFormat: STARTDT_ACT
+2023-10-03 14:04:09.072 [INFO] telem-agc.Port1.link - Received U format UFORMAT_STARTDT_ACT on NOT STARTED state
+2023-10-03 14:04:09.072 [TRACE] telem-agc.Port1.port.link - Port connected
+2023-10-03 14:04:09.072 [DEBUG] telem-agc.Port1.port.write.link - UFormat: STARTDT_CON
+2023-10-03 14:04:09.072 [INFO] telem-agc.Port1.link - UFORMAT_STARTDT_ACT, state STARTED RcvCnt: 0 RcvAckCnt: 0 SndCnt: 0 SndAckCnt: 0 Port buffer address: 0x5614c74c3690
+2023-10-03 14:04:09.072 [DEBUG] telem-agc.Port1.link - CommunicationOk
+2023-10-03 14:04:09.079 [TRACE] telem-agc.Port1.port.write -  68 04 0B 00 00 00
+2023-10-03 14:04:09.092 [INFO] telem-agc.Port1 - M_EI_NA_1 Cause: 1
+2023-10-03 14:04:09.096 [DEBUG] telem-agc.Port1.port.write.link - IFormat rcv-0 snd-0
+2023-10-03 14:04:09.102 [TRACE] telem-agc.Port1.port.write -  68 0E 00 00 00 00 46 01 04 00 01 00 00 00 00 01
+2023-10-03 14:04:18.080 [TRACE] telem-agc.Port1.port.read -  68 10 00 00 02 00 30 01 06 01 01 00 01 00 00 00 00 00
+2023-10-03 14:04:18.085 [DEBUG] telem-agc.Port1.port.read.link - IFormat rcv-0 snd-1
+2023-10-03 14:04:18.087 [TRACE] telem-agc.Port1 - Recv AO for addr: 1
+2023-10-03 14:04:18.087 [INFO] telem-agc.Port1 - Recv NORM cmd. int16 value: 0, float value after reinterpret: 0.000000000000
+2023-10-03 14:04:18.087 [TRACE] telem-agc.Port1 - aoObjId: 0
+2023-10-03 14:04:18.087 [TRACE] telem-agc.Port1 - Configured params:  time: no asduType: Normalized incoming asduType: 48
+2023-10-03 14:04:18.087 [DEBUG] telem-agc.Port1 - AO:  msg cause: 6
+2023-10-03 14:04:18.087 [INFO] telem-agc.Port1.db -  (1) control: 0.000000000000 flags: Activation  time: 2023-Oct-03 14:04:18.087267, recv
+2023-10-03 14:04:18.087 [TRACE] Gateway.Filter.ControlResponse - [none] Response() 0.000000000000 flags: Norm Execute Activation Activation  time: 2023-Oct-03 11:04:18.087267
+2023-10-03 14:04:18.088 [TRACE] Gateway.Filter.AddToBuffer - [AO_0_0_2_resp_filter] AO_0_0_2_buf << 0.000000000000 flags: Norm Execute Activation Confirmation Activation  time: 2023-Oct-03 11:04:18.087267
+2023-10-03 14:04:18.088 [DEBUG] telem-agc.Port1.db -  (1) event: 0.000000000000 flags: Activation  time: 2023-Oct-03 14:04:18.087267, buffered
+2023-10-03 14:04:18.088 [TRACE] Gateway.Filter.ControlResponse - [none] Response() 0.000000000000 flags: Norm Execute Activation Finished Execution Finished Activation  time: 2023-Oct-03 11:04:18.087267
+2023-10-03 14:04:18.089 [TRACE] Gateway.Filter.AddToBuffer - [AO_0_0_2_resp_filter] AO_0_0_2_buf << 0.000000000000 flags: Norm Execute Activation Finished Execution Finished Activation  time: 2023-Oct-03 11:04:18.087267
+2023-10-03 14:04:18.089 [DEBUG] telem-agc.Port1.db -  (1) event: 0.000000000000 flags: Execution Finished Activation  time: 2023-Oct-03 14:04:18.087267, buffered
+2023-10-03 14:04:18.089 [TRACE] Gateway.Filter.Scale - apply: xor BIT_NORMALIZED with: Norm Execute DeActivation 
+2023-10-03 14:04:18.089 [TRACE] Gateway.Filter.Scale - apply: output_value = (input_value + 1) * (outputMax - outputMin)/2 + outputMin
+2023-10-03 14:04:18.089 [TRACE] Gateway.Filter.Scale - result: 350 = (0 + 1) * (400 - 300)/2 + 300
+2023-10-03 14:04:18.089 [DEBUG] Gateway.Filter.Update - [AI_0_1_filter] AI_0_1_value = 350.000000000000 time: 2023-Oct-03 11:04:18.087267
+2023-10-03 14:04:18.090 [DEBUG] Gateway.Filter.Change - [AI_0_1_filter] Value changed to 350.000000000000 time: 2023-Oct-03 11:04:18.087267
+2023-10-03 14:04:18.090 [DEBUG] Gateway.Filter.Change - [AI_0_1_filter] Store value as previous
+2023-10-03 14:04:18.090 [DEBUG] Gateway.Filter.Deadband - Value changed to 350.000000000000 time: 2023-Oct-03 11:04:18.087267
+2023-10-03 14:04:18.090 [TRACE] Gateway.Filter.AddToBuffer - [AI_0_1_filter] AI_0_0_1_buf << 350.000000000000 time: 2023-Oct-03 11:04:18.087267
+2023-10-03 14:04:18.090 [DEBUG] telem-agc.Port1.db -  (2) event: 350.000000000000 time: 2023-Oct-03 14:04:18.087267, buffered
+2023-10-03 14:04:18.091 [TRACE] Gateway.Filter.AddToBuffer - [AI_0_1_filter] AI_1_0_1_buf << 350.000000000000 time: 2023-Oct-03 11:04:18.087267
+2023-10-03 14:04:18.091 [DEBUG] telem-agc.WebServer.db -  (2) event: 350.000000000000 time: 2023-Oct-03 14:04:18.087267, buffered
+2023-10-03 14:04:18.095 [DEBUG] telem-agc.Port1.db -  (2) event: 350.000000000000 time: 2023-Oct-03 14:04:18.087267, sent
+2023-10-03 14:04:18.095 [INFO] telem-agc.Port1.db -  (1) response: 0.000000000000 flags: Activation  time: 2023-Oct-03 14:04:18.087267, recv response
+2023-10-03 14:04:18.096 [TRACE] telem-agc.Port1 - general_procSendData GetAnalogOutputCommand id: 0 index: 0 id2: 0
+2023-10-03 14:04:18.096 [TRACE] telem-agc.Port1 - general_procSendData ao resp initNewMessage. rw: 0 initial rep val: 0
+2023-10-03 14:04:18.100 [DEBUG] telem-agc.Port1.port.write.link - IFormat rcv-1 snd-1
+2023-10-03 14:04:18.106 [INFO] telem-agc.Port1.db -  (1) response: 0.000000000000 flags: Execution Finished Activation  time: 2023-Oct-03 14:04:18.087267, recv response
+2023-10-03 14:04:18.106 [TRACE] telem-agc.Port1 - general_procSendData GetAnalogOutputCommand id: 0 index: 0 id2: 0
+2023-10-03 14:04:18.106 [TRACE] telem-agc.Port1 - general_procSendData ao resp initNewMessage. rw: 0 initial rep val: 0
+2023-10-03 14:04:18.106 [TRACE] telem-agc.Port1.port.write -  68 10 02 00 02 00 30 01 07 00 01 00 01 00 00 00 00 00
+2023-10-03 14:04:18.110 [DEBUG] telem-agc.Port1.port.write.link - IFormat rcv-1 snd-2
+2023-10-03 14:04:18.117 [TRACE] telem-agc.Port1.port.write -  68 10 04 00 02 00 30 01 0A 00 01 00 01 00 00 00 00 00
+2023-10-03 14:04:18.130 [TRACE] telem-agc.Port1 - procEvent_analogInputEvent input events size: 1 internal iterator: 1
+2023-10-03 14:04:18.134 [DEBUG] telem-agc.Port1.port.write.link - IFormat rcv-1 snd-3
+2023-10-03 14:04:18.142 [TRACE] telem-agc.Port1.port.write -  68 19 06 00 02 00 24 01 03 00 01 00 02 00 00 00 00 AF 43 00 A7 46 04 8E 03 0A 17
+2023-10-03 14:04:19.155 [TRACE] telem-agc.Port1.port.read -  68 04 01 00 08 00
+2023-10-03 14:04:19.160 [DEBUG] telem-agc.Port1.port.read.link - SFormat rcv-4 snd-4
+2023-10-03 14:04:25.845 [TRACE] telem-agc.Port1.port.read -  68 10 02 00 08 00 30 01 06 01 01 00 01 00 00 00 00 00
+2023-10-03 14:04:25.850 [DEBUG] telem-agc.Port1.port.read.link - IFormat rcv-1 snd-4
+2023-10-03 14:04:25.852 [TRACE] telem-agc.Port1 - Recv AO for addr: 1
+2023-10-03 14:04:25.852 [INFO] telem-agc.Port1 - Recv NORM cmd. int16 value: 0, float value after reinterpret: 0.000000000000
+2023-10-03 14:04:25.852 [TRACE] telem-agc.Port1 - aoObjId: 0
+2023-10-03 14:04:25.852 [TRACE] telem-agc.Port1 - Configured params:  time: no asduType: Normalized incoming asduType: 48
+2023-10-03 14:04:25.852 [DEBUG] telem-agc.Port1 - AO:  msg cause: 6
+2023-10-03 14:04:25.852 [INFO] telem-agc.Port1.db -  (1) control: 0.000000000000 flags: Activation  time: 2023-Oct-03 14:04:25.852731, recv
+2023-10-03 14:04:25.853 [TRACE] Gateway.Filter.ControlResponse - [none] Response() 0.000000000000 flags: Norm Execute Activation Activation  time: 2023-Oct-03 11:04:25.852731
+2023-10-03 14:04:25.853 [TRACE] Gateway.Filter.AddToBuffer - [AO_0_0_2_resp_filter] AO_0_0_2_buf << 0.000000000000 flags: Norm Execute Activation Confirmation Activation  time: 2023-Oct-03 11:04:25.852731
+2023-10-03 14:04:25.853 [DEBUG] telem-agc.Port1.db -  (1) event: 0.000000000000 flags: Activation  time: 2023-Oct-03 14:04:25.852731, buffered
+2023-10-03 14:04:25.854 [TRACE] Gateway.Filter.ControlResponse - [none] Response() 0.000000000000 flags: Norm Execute Activation Finished Execution Finished Activation  time: 2023-Oct-03 11:04:25.852731
+2023-10-03 14:04:25.854 [TRACE] Gateway.Filter.AddToBuffer - [AO_0_0_2_resp_filter] AO_0_0_2_buf << 0.000000000000 flags: Norm Execute Activation Finished Execution Finished Activation  time: 2023-Oct-03 11:04:25.852731
+2023-10-03 14:04:25.854 [DEBUG] telem-agc.Port1.db -  (1) event: 0.000000000000 flags: Execution Finished Activation  time: 2023-Oct-03 14:04:25.852731, buffered
+2023-10-03 14:04:25.854 [TRACE] Gateway.Filter.Scale - apply: xor BIT_NORMALIZED with: Norm Execute DeActivation 
+2023-10-03 14:04:25.854 [TRACE] Gateway.Filter.Scale - apply: output_value = (input_value + 1) * (outputMax - outputMin)/2 + outputMin
+2023-10-03 14:04:25.854 [TRACE] Gateway.Filter.Scale - result: 350 = (0 + 1) * (400 - 300)/2 + 300
+2023-10-03 14:04:25.855 [DEBUG] Gateway.Filter.Update - [AI_0_1_filter] AI_0_1_value = 350.000000000000 time: 2023-Oct-03 11:04:25.852731
+2023-10-03 14:04:25.855 [DEBUG] Gateway.Filter.Change - [AI_0_1_filter] Previous value 350.000000000000 time: 2023-Oct-03 11:04:18.087267 doAdd: 0 prev_bits:  new_bits: 
+2023-10-03 14:04:25.855 [WARN] telem-agc.Port1.db - Control uhandled exception e: Filter::NoChange
+2023-10-03 14:04:25.870 [INFO] telem-agc.Port1.db -  (1) response: 0.000000000000 flags: Activation  time: 2023-Oct-03 14:04:25.852731, recv response
+2023-10-03 14:04:25.870 [TRACE] telem-agc.Port1 - general_procSendData GetAnalogOutputCommand id: 0 index: 0 id2: 0
+2023-10-03 14:04:25.870 [TRACE] telem-agc.Port1 - general_procSendData ao resp initNewMessage. rw: 0 initial rep val: 0
+2023-10-03 14:04:25.874 [DEBUG] telem-agc.Port1.port.write.link - IFormat rcv-2 snd-4
+2023-10-03 14:04:25.880 [TRACE] telem-agc.Port1.port.write -  68 10 08 00 04 00 30 01 07 00 01 00 01 00 00 00 00 00
+2023-10-03 14:04:25.894 [INFO] telem-agc.Port1.db -  (1) response: 0.000000000000 flags: Execution Finished Activation  time: 2023-Oct-03 14:04:25.852731, recv response
+2023-10-03 14:04:25.894 [TRACE] telem-agc.Port1 - general_procSendData GetAnalogOutputCommand id: 0 index: 0 id2: 0
+2023-10-03 14:04:25.894 [TRACE] telem-agc.Port1 - general_procSendData ao resp initNewMessage. rw: 0 initial rep val: 0
+2023-10-03 14:04:25.898 [DEBUG] telem-agc.Port1.port.write.link - IFormat rcv-2 snd-5
+2023-10-03 14:04:25.905 [TRACE] telem-agc.Port1.port.write -  68 10 0A 00 04 00 30 01 0A 00 01 00 01 00 00 00 00 00
+2023-10-03 14:04:29.245 [TRACE] telem-agc.Port1.port.read -  68 04 43 00 00 00
+2023-10-03 14:04:29.250 [DEBUG] telem-agc.Port1.port.read.link - UFormat: TESTFR_ACT
+2023-10-03 14:04:29.250 [DEBUG] telem-agc.Port1.port.write.link - UFormat: TESTFR_CON
+2023-10-03 14:04:29.251 [TRACE] telem-agc.Port1.port.write -  68 04 83 00 00 00
+2023-10-03 14:04:35.295 [TRACE] telem-agc.Port1.port.read -  68 04 01 00 0C 00
+2023-10-03 14:04:35.300 [DEBUG] telem-agc.Port1.port.read.link - SFormat rcv-6 snd-6
+2023-10-03 14:04:35.601 [TRACE] telem-agc.Port1.port.read -  68 10 04 00 0C 00 30 01 06 01 01 00 01 00 00 80 3E 00
+2023-10-03 14:04:35.609 [DEBUG] telem-agc.Port1.port.read.link - IFormat rcv-2 snd-6
+2023-10-03 14:04:35.611 [TRACE] telem-agc.Port1 - Recv AO for addr: 1
+2023-10-03 14:04:35.611 [INFO] telem-agc.Port1 - Recv NORM cmd. int16 value: 16000, float value after reinterpret: 0.488296151161
+2023-10-03 14:04:35.611 [TRACE] telem-agc.Port1 - aoObjId: 0
+2023-10-03 14:04:35.611 [TRACE] telem-agc.Port1 - Configured params:  time: no asduType: Normalized incoming asduType: 48
+2023-10-03 14:04:35.611 [DEBUG] telem-agc.Port1 - AO:  msg cause: 6
+2023-10-03 14:04:35.612 [INFO] telem-agc.Port1.db -  (1) control: 0.488296151161 flags: Activation  time: 2023-Oct-03 14:04:35.611996, recv
+2023-10-03 14:04:35.612 [TRACE] Gateway.Filter.ControlResponse - [none] Response() 0.488296151161 flags: Norm Execute Activation Activation  time: 2023-Oct-03 11:04:35.611996
+2023-10-03 14:04:35.612 [TRACE] Gateway.Filter.AddToBuffer - [AO_0_0_2_resp_filter] AO_0_0_2_buf << 0.488296151161 flags: Norm Execute Activation Confirmation Activation  time: 2023-Oct-03 11:04:35.611996
+2023-10-03 14:04:35.613 [DEBUG] telem-agc.Port1.db -  (1) event: 0.488296151161 flags: Activation  time: 2023-Oct-03 14:04:35.611996, buffered
+2023-10-03 14:04:35.613 [TRACE] Gateway.Filter.ControlResponse - [none] Response() 0.488296151161 flags: Norm Execute Activation Finished Execution Finished Activation  time: 2023-Oct-03 11:04:35.611996
+2023-10-03 14:04:35.613 [TRACE] Gateway.Filter.AddToBuffer - [AO_0_0_2_resp_filter] AO_0_0_2_buf << 0.488296151161 flags: Norm Execute Activation Finished Execution Finished Activation  time: 2023-Oct-03 11:04:35.611996
+2023-10-03 14:04:35.614 [DEBUG] telem-agc.Port1.db -  (1) event: 0.488296151161 flags: Execution Finished Activation  time: 2023-Oct-03 14:04:35.611996, buffered
+2023-10-03 14:04:35.614 [TRACE] Gateway.Filter.Scale - apply: xor BIT_NORMALIZED with: Norm Execute DeActivation 
+2023-10-03 14:04:35.614 [TRACE] Gateway.Filter.Scale - apply: output_value = (input_value + 1) * (outputMax - outputMin)/2 + outputMin
+2023-10-03 14:04:35.614 [TRACE] Gateway.Filter.Scale - result: 374.415 = (0.488296 + 1) * (400 - 300)/2 + 300
+2023-10-03 14:04:35.614 [DEBUG] Gateway.Filter.Update - [AI_0_1_filter] AI_0_1_value = 374.414807558060 time: 2023-Oct-03 11:04:35.611996
+2023-10-03 14:04:35.614 [DEBUG] Gateway.Filter.Change - [AI_0_1_filter] Previous value 350.000000000000 time: 2023-Oct-03 11:04:18.087267 doAdd: 1 prev_bits:  new_bits: 
+2023-10-03 14:04:35.614 [DEBUG] Gateway.Filter.Change - [AI_0_1_filter] Value changed to 374.414807558060 time: 2023-Oct-03 11:04:35.611996
+2023-10-03 14:04:35.614 [DEBUG] Gateway.Filter.Change - [AI_0_1_filter] Store value as previous
+2023-10-03 14:04:35.615 [TRACE] Gateway.Filter.Deadband - old val: 350 new value: 374.415 deabband: 2 zero deadband: 0
+2023-10-03 14:04:35.615 [DEBUG] Gateway.Filter.Deadband - Value changed to 374.414807558060 time: 2023-Oct-03 11:04:35.611996
+2023-10-03 14:04:35.615 [TRACE] Gateway.Filter.AddToBuffer - [AI_0_1_filter] AI_0_0_1_buf << 374.414807558060 time: 2023-Oct-03 11:04:35.611996
+2023-10-03 14:04:35.615 [DEBUG] telem-agc.Port1.db -  (2) event: 374.414807558060 time: 2023-Oct-03 14:04:35.611996, buffered
+2023-10-03 14:04:35.616 [TRACE] Gateway.Filter.AddToBuffer - [AI_0_1_filter] AI_1_0_1_buf << 374.414807558060 time: 2023-Oct-03 11:04:35.611996
+2023-10-03 14:04:35.616 [DEBUG] telem-agc.WebServer.db -  (2) event: 374.414807558060 time: 2023-Oct-03 14:04:35.611996, buffered
+2023-10-03 14:04:35.620 [DEBUG] telem-agc.Port1.db -  (2) event: 374.414807558060 time: 2023-Oct-03 14:04:35.611996, sent
+2023-10-03 14:04:35.629 [INFO] telem-agc.Port1.db -  (1) response: 0.488296151161 flags: Activation  time: 2023-Oct-03 14:04:35.611996, recv response
+2023-10-03 14:04:35.629 [TRACE] telem-agc.Port1 - general_procSendData GetAnalogOutputCommand id: 0 index: 0 id2: 0
+2023-10-03 14:04:35.629 [TRACE] telem-agc.Port1 - general_procSendData ao resp initNewMessage. rw: 16000 initial rep val: 0.488296
+2023-10-03 14:04:35.633 [DEBUG] telem-agc.Port1.port.write.link - IFormat rcv-3 snd-6
+2023-10-03 14:04:35.640 [TRACE] telem-agc.Port1.port.write -  68 10 0C 00 06 00 30 01 07 00 01 00 01 00 00 80 3E 00
+2023-10-03 14:04:35.654 [INFO] telem-agc.Port1.db -  (1) response: 0.488296151161 flags: Execution Finished Activation  time: 2023-Oct-03 14:04:35.611996, recv response
+2023-10-03 14:04:35.654 [TRACE] telem-agc.Port1 - general_procSendData GetAnalogOutputCommand id: 0 index: 0 id2: 0
+2023-10-03 14:04:35.654 [TRACE] telem-agc.Port1 - general_procSendData ao resp initNewMessage. rw: 16000 initial rep val: 0.488296
+2023-10-03 14:04:35.658 [DEBUG] telem-agc.Port1.port.write.link - IFormat rcv-3 snd-7
+2023-10-03 14:04:35.665 [TRACE] telem-agc.Port1.port.write -  68 10 0E 00 06 00 30 01 0A 00 01 00 01 00 00 80 3E 00
+2023-10-03 14:04:35.678 [TRACE] telem-agc.Port1 - procEvent_analogInputEvent input events size: 1 internal iterator: 1
+2023-10-03 14:04:35.682 [DEBUG] telem-agc.Port1.port.write.link - IFormat rcv-3 snd-8
+2023-10-03 14:04:35.689 [TRACE] telem-agc.Port1.port.write -  68 19 10 00 06 00 24 01 03 00 01 00 02 00 00 18 35 BB 43 00 1B 8B 04 8E 03 0A 17
+2023-10-03 14:04:45.396 [TRACE] telem-agc.Port1.port.read -  68 04 01 00 12 00
+2023-10-03 14:04:45.398 [DEBUG] telem-agc.Port1.port.read.link - SFormat rcv-9 snd-9
+2023-10-03 14:04:49.413 [TRACE] telem-agc.Port1.port.read -  68 04 43 00 00 00
+2023-10-03 14:04:49.418 [DEBUG] telem-agc.Port1.port.read.link - UFormat: TESTFR_ACT
+2023-10-03 14:04:49.418 [DEBUG] telem-agc.Port1.port.write.link - UFormat: TESTFR_CON
+2023-10-03 14:04:49.426 [TRACE] telem-agc.Port1.port.write -  68 04 83 00 00 00
+2023-10-03 14:04:54.923 [TRACE] Gw.Db.Sync - DbEngineAvgt, avg: 0.000108 lo: 0 hi: 0.005355
+2023-10-03 14:04:54.923 [TRACE] Gw.Db.Sync - DbMemQueueAvgt, avg: 5e-06 lo: 0 hi: 0.000259
+2023-10-03 14:04:54.923 [TRACE] Gw.Db.Sync - DbSizeAvgt, avg: 2.4e-05 lo: 0 hi: 0.001014
+2023-10-03 14:04:54.924 [TRACE] Gw.Db.Sync - DbSyncAvgt, avg: 1e-06 lo: 0 hi: 2.8e-05
+2023-10-03 14:04:56.304 [TRACE] telem-agc.Port1.port.read -  68 10 06 00 12 00 30 01 06 01 01 00 01 00 00 FF 7F 00
+2023-10-03 14:04:56.308 [DEBUG] telem-agc.Port1.port.read.link - IFormat rcv-3 snd-9
+2023-10-03 14:04:56.311 [TRACE] telem-agc.Port1 - Recv AO for addr: 1
+2023-10-03 14:04:56.311 [INFO] telem-agc.Port1 - Recv NORM cmd. int16 value: 32767, float value after reinterpret: 1.000000000000
+2023-10-03 14:04:56.311 [TRACE] telem-agc.Port1 - aoObjId: 0
+2023-10-03 14:04:56.311 [TRACE] telem-agc.Port1 - Configured params:  time: no asduType: Normalized incoming asduType: 48
+2023-10-03 14:04:56.311 [DEBUG] telem-agc.Port1 - AO:  msg cause: 6
+2023-10-03 14:04:56.312 [INFO] telem-agc.Port1.db -  (1) control: 1.000000000000 flags: Activation  time: 2023-Oct-03 14:04:56.311768, recv
+2023-10-03 14:04:56.312 [TRACE] Gateway.Filter.ControlResponse - [none] Response() 1.000000000000 flags: Norm Execute Activation Activation  time: 2023-Oct-03 11:04:56.311768
+2023-10-03 14:04:56.312 [TRACE] Gateway.Filter.AddToBuffer - [AO_0_0_2_resp_filter] AO_0_0_2_buf << 1.000000000000 flags: Norm Execute Activation Confirmation Activation  time: 2023-Oct-03 11:04:56.311768
+2023-10-03 14:04:56.312 [DEBUG] telem-agc.Port1.db -  (1) event: 1.000000000000 flags: Activation  time: 2023-Oct-03 14:04:56.311768, buffered
+2023-10-03 14:04:56.313 [TRACE] Gateway.Filter.ControlResponse - [none] Response() 1.000000000000 flags: Norm Execute Activation Finished Execution Finished Activation  time: 2023-Oct-03 11:04:56.311768
+2023-10-03 14:04:56.313 [TRACE] Gateway.Filter.AddToBuffer - [AO_0_0_2_resp_filter] AO_0_0_2_buf << 1.000000000000 flags: Norm Execute Activation Finished Execution Finished Activation  time: 2023-Oct-03 11:04:56.311768
+2023-10-03 14:04:56.313 [DEBUG] telem-agc.Port1.db -  (1) event: 1.000000000000 flags: Execution Finished Activation  time: 2023-Oct-03 14:04:56.311768, buffered
+2023-10-03 14:04:56.313 [TRACE] Gateway.Filter.Scale - apply: xor BIT_NORMALIZED with: Norm Execute DeActivation 
+2023-10-03 14:04:56.313 [TRACE] Gateway.Filter.Scale - apply: output_value = (input_value + 1) * (outputMax - outputMin)/2 + outputMin
+2023-10-03 14:04:56.313 [TRACE] Gateway.Filter.Scale - result: 400 = (1 + 1) * (400 - 300)/2 + 300
+2023-10-03 14:04:56.314 [DEBUG] Gateway.Filter.Update - [AI_0_1_filter] AI_0_1_value = 400.000000000000 time: 2023-Oct-03 11:04:56.311768
+2023-10-03 14:04:56.314 [DEBUG] Gateway.Filter.Change - [AI_0_1_filter] Previous value 374.414807558060 time: 2023-Oct-03 11:04:35.611996 doAdd: 1 prev_bits:  new_bits: 
+2023-10-03 14:04:56.314 [DEBUG] Gateway.Filter.Change - [AI_0_1_filter] Value changed to 400.000000000000 time: 2023-Oct-03 11:04:56.311768
+2023-10-03 14:04:56.314 [DEBUG] Gateway.Filter.Change - [AI_0_1_filter] Store value as previous
+2023-10-03 14:04:56.314 [TRACE] Gateway.Filter.Deadband - old val: 374.415 new value: 400 deabband: 2 zero deadband: 0
+2023-10-03 14:04:56.314 [DEBUG] Gateway.Filter.Deadband - Value changed to 400.000000000000 time: 2023-Oct-03 11:04:56.311768
+2023-10-03 14:04:56.315 [TRACE] Gateway.Filter.AddToBuffer - [AI_0_1_filter] AI_0_0_1_buf << 400.000000000000 time: 2023-Oct-03 11:04:56.311768
+2023-10-03 14:04:56.315 [DEBUG] telem-agc.Port1.db -  (2) event: 400.000000000000 time: 2023-Oct-03 14:04:56.311768, buffered
+2023-10-03 14:04:56.315 [TRACE] Gateway.Filter.AddToBuffer - [AI_0_1_filter] AI_1_0_1_buf << 400.000000000000 time: 2023-Oct-03 11:04:56.311768
+2023-10-03 14:04:56.315 [DEBUG] telem-agc.WebServer.db -  (2) event: 400.000000000000 time: 2023-Oct-03 14:04:56.311768, buffered
+2023-10-03 14:04:56.319 [DEBUG] telem-agc.Port1.db -  (2) event: 400.000000000000 time: 2023-Oct-03 14:04:56.311768, sent
+2023-10-03 14:04:56.320 [INFO] telem-agc.Port1.db -  (1) response: 1.000000000000 flags: Activation  time: 2023-Oct-03 14:04:56.311768, recv response
+2023-10-03 14:04:56.320 [TRACE] telem-agc.Port1 - general_procSendData GetAnalogOutputCommand id: 0 index: 0 id2: 0
+2023-10-03 14:04:56.320 [TRACE] telem-agc.Port1 - general_procSendData ao resp initNewMessage. rw: 32767 initial rep val: 1
+2023-10-03 14:04:56.324 [DEBUG] telem-agc.Port1.port.write.link - IFormat rcv-4 snd-9
+2023-10-03 14:04:56.331 [INFO] telem-agc.Port1.db -  (1) response: 1.000000000000 flags: Execution Finished Activation  time: 2023-Oct-03 14:04:56.311768, recv response
+2023-10-03 14:04:56.331 [TRACE] telem-agc.Port1 - general_procSendData GetAnalogOutputCommand id: 0 index: 0 id2: 0
+2023-10-03 14:04:56.331 [TRACE] telem-agc.Port1 - general_procSendData ao resp initNewMessage. rw: 32767 initial rep val: 1
+2023-10-03 14:04:56.332 [TRACE] telem-agc.Port1.port.write -  68 10 12 00 08 00 30 01 07 00 01 00 01 00 00 FF 7F 00
+2023-10-03 14:04:56.335 [DEBUG] telem-agc.Port1.port.write.link - IFormat rcv-4 snd-10
+2023-10-03 14:04:56.342 [TRACE] telem-agc.Port1.port.write -  68 10 14 00 08 00 30 01 0A 00 01 00 01 00 00 FF 7F 00
+2023-10-03 14:04:56.355 [TRACE] telem-agc.Port1 - procEvent_analogInputEvent input events size: 1 internal iterator: 1
+2023-10-03 14:04:56.360 [DEBUG] telem-agc.Port1.port.write.link - IFormat rcv-4 snd-11
+2023-10-03 14:04:56.368 [TRACE] telem-agc.Port1.port.write -  68 19 16 00 08 00 24 01 03 00 01 00 02 00 00 00 00 C8 43 00 F7 DB 04 8E 03 0A 17
+2023-10-03 14:05:05.537 [TRACE] telem-agc.Port1.port.read -  68 04 01 00 18 00
+2023-10-03 14:05:05.542 [DEBUG] telem-agc.Port1.port.read.link - SFormat rcv-12 snd-12
+2023-10-03 14:05:07.107 [TRACE] telem-agc.Port1.port.read -  68 10 08 00 18 00 30 01 06 01 01 00 01 00 00 08 80 00
+2023-10-03 14:05:07.115 [DEBUG] telem-agc.Port1.port.read.link - IFormat rcv-4 snd-12
+2023-10-03 14:05:07.118 [TRACE] telem-agc.Port1 - Recv AO for addr: 1
+2023-10-03 14:05:07.118 [INFO] telem-agc.Port1 - Recv NORM cmd. int16 value: -32760, float value after reinterpret: -0.999755859375
+2023-10-03 14:05:07.118 [TRACE] telem-agc.Port1 - aoObjId: 0
+2023-10-03 14:05:07.118 [TRACE] telem-agc.Port1 - Configured params:  time: no asduType: Normalized incoming asduType: 48
+2023-10-03 14:05:07.118 [DEBUG] telem-agc.Port1 - AO:  msg cause: 6
+2023-10-03 14:05:07.119 [INFO] telem-agc.Port1.db -  (1) control: -0.999755859375 flags: Activation  time: 2023-Oct-03 14:05:07.118895, recv
+2023-10-03 14:05:07.119 [TRACE] Gateway.Filter.ControlResponse - [none] Response() -0.999755859375 flags: Norm Execute Activation Activation  time: 2023-Oct-03 11:05:07.118895
+2023-10-03 14:05:07.119 [TRACE] Gateway.Filter.AddToBuffer - [AO_0_0_2_resp_filter] AO_0_0_2_buf << -0.999755859375 flags: Norm Execute Activation Confirmation Activation  time: 2023-Oct-03 11:05:07.118895
+2023-10-03 14:05:07.120 [DEBUG] telem-agc.Port1.db -  (1) event: -0.999755859375 flags: Activation  time: 2023-Oct-03 14:05:07.118895, buffered
+2023-10-03 14:05:07.120 [TRACE] Gateway.Filter.ControlResponse - [none] Response() -0.999755859375 flags: Norm Execute Activation Finished Execution Finished Activation  time: 2023-Oct-03 11:05:07.118895
+2023-10-03 14:05:07.120 [TRACE] Gateway.Filter.AddToBuffer - [AO_0_0_2_resp_filter] AO_0_0_2_buf << -0.999755859375 flags: Norm Execute Activation Finished Execution Finished Activation  time: 2023-Oct-03 11:05:07.118895
+2023-10-03 14:05:07.120 [DEBUG] telem-agc.Port1.db -  (1) event: -0.999755859375 flags: Execution Finished Activation  time: 2023-Oct-03 14:05:07.118895, buffered
+2023-10-03 14:05:07.120 [TRACE] Gateway.Filter.Scale - apply: xor BIT_NORMALIZED with: Norm Execute DeActivation 
+2023-10-03 14:05:07.120 [TRACE] Gateway.Filter.Scale - apply: output_value = (input_value + 1) * (outputMax - outputMin)/2 + outputMin
+2023-10-03 14:05:07.121 [TRACE] Gateway.Filter.Scale - result: 300.012 = (-0.999756 + 1) * (400 - 300)/2 + 300
+2023-10-03 14:05:07.121 [DEBUG] Gateway.Filter.Update - [AI_0_1_filter] AI_0_1_value = 300.012207031250 time: 2023-Oct-03 11:05:07.118895
+2023-10-03 14:05:07.121 [DEBUG] Gateway.Filter.Change - [AI_0_1_filter] Previous value 400.000000000000 time: 2023-Oct-03 11:04:56.311768 doAdd: 1 prev_bits:  new_bits: 
+2023-10-03 14:05:07.121 [DEBUG] Gateway.Filter.Change - [AI_0_1_filter] Value changed to 300.012207031250 time: 2023-Oct-03 11:05:07.118895
+2023-10-03 14:05:07.121 [DEBUG] Gateway.Filter.Change - [AI_0_1_filter] Store value as previous
+2023-10-03 14:05:07.121 [TRACE] Gateway.Filter.Deadband - old val: 400 new value: 300.012 deabband: 2 zero deadband: 0
+2023-10-03 14:05:07.122 [DEBUG] Gateway.Filter.Deadband - Value changed to 300.012207031250 time: 2023-Oct-03 11:05:07.118895
+2023-10-03 14:05:07.122 [TRACE] Gateway.Filter.AddToBuffer - [AI_0_1_filter] AI_0_0_1_buf << 300.012207031250 time: 2023-Oct-03 11:05:07.118895
+2023-10-03 14:05:07.122 [DEBUG] telem-agc.Port1.db -  (2) event: 300.012207031250 time: 2023-Oct-03 14:05:07.118895, buffered
+2023-10-03 14:05:07.122 [TRACE] Gateway.Filter.AddToBuffer - [AI_0_1_filter] AI_1_0_1_buf << 300.012207031250 time: 2023-Oct-03 11:05:07.118895
+2023-10-03 14:05:07.122 [DEBUG] telem-agc.WebServer.db -  (2) event: 300.012207031250 time: 2023-Oct-03 14:05:07.118895, buffered
+2023-10-03 14:05:07.127 [DEBUG] telem-agc.Port1.db -  (2) event: 300.012207031250 time: 2023-Oct-03 14:05:07.118895, sent
+2023-10-03 14:05:07.135 [INFO] telem-agc.Port1.db -  (1) response: -0.999755859375 flags: Activation  time: 2023-Oct-03 14:05:07.118895, recv response
+2023-10-03 14:05:07.135 [TRACE] telem-agc.Port1 - general_procSendData GetAnalogOutputCommand id: 0 index: 0 id2: 0
+2023-10-03 14:05:07.135 [TRACE] telem-agc.Port1 - general_procSendData ao resp initNewMessage. rw: 4294934536 initial rep val: -0.999756
+2023-10-03 14:05:07.139 [DEBUG] telem-agc.Port1.port.write.link - IFormat rcv-5 snd-12
+2023-10-03 14:05:07.148 [TRACE] telem-agc.Port1.port.write -  68 10 18 00 0A 00 30 01 07 00 01 00 01 00 00 08 80 00
+2023-10-03 14:05:07.159 [INFO] telem-agc.Port1.db -  (1) response: -0.999755859375 flags: Execution Finished Activation  time: 2023-Oct-03 14:05:07.118895, recv response
+2023-10-03 14:05:07.160 [TRACE] telem-agc.Port1 - general_procSendData GetAnalogOutputCommand id: 0 index: 0 id2: 0
+2023-10-03 14:05:07.160 [TRACE] telem-agc.Port1 - general_procSendData ao resp initNewMessage. rw: 4294934536 initial rep val: -0.999756
+2023-10-03 14:05:07.163 [DEBUG] telem-agc.Port1.port.write.link - IFormat rcv-5 snd-13
+2023-10-03 14:05:07.172 [TRACE] telem-agc.Port1.port.write -  68 10 1A 00 0A 00 30 01 0A 00 01 00 01 00 00 08 80 00
+2023-10-03 14:05:07.184 [TRACE] telem-agc.Port1 - procEvent_analogInputEvent input events size: 1 internal iterator: 1
+2023-10-03 14:05:07.187 [DEBUG] telem-agc.Port1.port.write.link - IFormat rcv-5 snd-14
+2023-10-03 14:05:07.195 [TRACE] telem-agc.Port1.port.write -  68 19 1C 00 0A 00 24 01 03 00 01 00 02 00 00 90 01 96 43 00 CE 1B 05 8E 03 0A 17

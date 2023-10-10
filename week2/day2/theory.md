@@ -71,6 +71,3 @@ ls \*.txt  # Lists files with names "*.txt", without expanding '*'
 1. Quoted strings (`" "`, `' '`) will disable most special character interpretation.
 2. Shell options (`nullglob`, `failglob`, `nocaseglob`, etc.) affect how globbing behaves.
 
-## Conclusions
-
-Understanding

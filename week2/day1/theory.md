@@ -140,7 +140,7 @@ function get_date {
 To understand the scope of variables in functions.
 
 ### Theory
-- `local` keyword makes a variable local to the function.
+- `local` keyword makes a variable local to the function. The `x` below cannot be acessed outside the function
   
 ### Code Example
 ```shell
@@ -171,30 +171,6 @@ export -f hello_world
   
 ### Practice
 1. Export a function and call it in a sub-shell.
-
----
-
-## Section 6: Advanced Topics
-
-### Objective
-To explore advanced function-related topics like recursion and callbacks.
-
-### Theory
-- Functions can call themselves (recursion).
-- Functions can be passed as arguments (callbacks).
-  
-### Code Example
-```shell
-# Recursion
-function factorial {
-  (( $1 <= 1 )) && echo 1 && return
-  echo $(( $1 * $(factorial $(( $1 - 1 ))) ))
-}
-```
-  
-### Practice
-1. Write a recursive function to find the factorial of a number.
-2. Implement a callback mechanism.
 
 ---
 

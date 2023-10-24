@@ -9,7 +9,7 @@ temperature=$(curl -s "https://api.openweathermap.org/data/2.5/weather?units=${U
 
 result=$(echo "$temperature < 4" | bc -l)
 
-if [ "$result" -eq 1 ]; then
+if [[ $result -eq 1 ]]; then
     echo "It may be slippery outside (temp is $temperature)"
 else
     echo "The temp: $temperature"

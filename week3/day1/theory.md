@@ -237,7 +237,7 @@ The `-E` option in `grep` enables Extended Regular Expression (ERE) capabilities
 ### Escape Sequences
 14. **Escape special characters `\`**
     ```shell
-    echo "\$" | grep -E '\\\$'
+    echo '$' | grep -E '\$'
     ```
     - Matches "$".
 
@@ -271,70 +271,70 @@ To learn practical usage of `grep` with the `-E` option for extracting useful in
 
 ### 1. Filtering IPv4 Addresses
 ```shell
-echo -e "192.168.1.1\\n172.31.0.0\\n10.0.0.1" > ips.txt
-grep -E '([0-9]{1,3}\\.){3}[0-9]{1,3}' ips.txt
+echo -e "192.168.1.1\n172.31.0.0\n10.0.0.1" > ips.txt
+grep -E '([0-9]{1,3}\.){3}[0-9]{1,3}' ips.txt
 ```
 - Matches IPv4 addresses.
 
 ### 2. Extracting Email Addresses
 ```shell
-echo -e "user@example.com\\nuser.name@sub.example.com" > emails.txt
+echo -e "user@example.com\nuser.name@sub.example.com" > emails.txt
 grep -E '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}' emails.txt
 ```
 - Matches email addresses.
 
 ### 3. Matching Dates (MM/DD/YYYY)
 ```shell
-echo -e "01/20/2022\\n12/31/1999" > dates.txt
+echo -e "01/20/2022\n12/31/1999" > dates.txt
 grep -E '(0[1-9]|1[0-2])/(0[1-9]|[12][0-9]|3[01])/\\d{4}' dates.txt
 ```
 - Matches dates in MM/DD/YYYY format.
 
 ### 4. Log Lines with Error Levels
 ```shell
-echo -e "[INFO] Request successful\\n[ERROR] Failed to connect" > logs.txt
-grep -E '\\[(INFO|ERROR|DEBUG)\\]' logs.txt
+echo -e "[INFO] Request successful\n[ERROR] Failed to connect" > logs.txt
+grep -E '\[(INFO|ERROR|DEBUG)\]' logs.txt
 ```
 - Matches lines with log levels like [INFO], [ERROR], [DEBUG].
 
 ### 5. URL Extraction
 ```shell
-echo -e "http://example.com\\nhttps://secure.example.com" > urls.txt
+echo -e "http://example.com\nhttps://secure.example.com" > urls.txt
 grep -E 'https?://[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}' urls.txt
 ```
 - Matches HTTP and HTTPS URLs.
 
 ### 6. Extracting Hexadecimal Colors
 ```shell
-echo -e "#FFFFFF\\n#000000\\n#4CAF50" > colors.txt
+echo -e "#FFFFFF\n#000000\n#4CAF50" > colors.txt
 grep -E '#[a-fA-F0-9]{6}' colors.txt
 ```
 - Matches hexadecimal color codes.
 
 ### 7. Filtering MAC Addresses
 ```shell
-echo -e "00:1A:2B:3C:4D:5E\\nFF:FF:FF:FF:FF:FF" > macs.txt
+echo -e "00:1A:2B:3C:4D:5E\nFF:FF:FF:FF:FF:FF" > macs.txt
 grep -E '([a-fA-F0-9]{2}:){5}[a-fA-F0-9]{2}' macs.txt
 ```
 - Matches MAC addresses.
 
 ### 8. Finding TODO Comments
 ```shell
-echo -e "// TODO: fix this\\n# TODO: remove that" > todos.txt
+echo -e "// TODO: fix this\n# TODO: remove that" > todos.txt
 grep -E 'TODO: .+' todos.txt
 ```
 - Matches lines with "TODO" comments.
 
 ### 9. Matching File Extensions
 ```shell
-echo -e "image.jpg\\narchive.tar.gz" > files.txt
+echo -e "image.jpg\narchive.tar.gz" > files.txt
 grep -E '\\.(jpg|png|tar\\.gz)$' files.txt
 ```
 - Matches specific file extensions.
 
 ### 10. Extracting Domain Names
 ```shell
-echo -e "www.example.com\\nsub.example.co.uk" > domains.txt
+echo -e "www.example.com\nsub.example.co.uk" > domains.txt
 grep -E '([a-zA-Z0-9.-]+)\\.([a-zA-Z]{2,})' domains.txt
 ```
 - Matches domain names.

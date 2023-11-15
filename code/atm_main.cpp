@@ -15,47 +15,9 @@
 #include <string>
 #include <vector>
 
+#include "bank_account.h"
+
 using namespace std;
-
-namespace MyCompanyLtdLibrary {
-namespace SecondNs {
-
-class BankAccount {
-private:
-// encapsulation
-  double money_{0}; // fundamental type 
-  string name;
-  string number;
-
-public:
-  double getMoney() {
-    return money_;
-  }
-
-  string getName() {
-    return name;
-  }
-
-  // these algorithms/functions alter the state of the variable of type
-  // BankAccount
-  void setName(string n) {
-    name = n;
-  }
-
-  void withdraw(double amount) {
-    if (money_ < amount) {
-      cout << "Insufficient funds bro!\n";
-      return;
-    }
-
-    money_ = money_ - amount;
-  }
-
-  void add(double amount) { money_ = money_ + amount; }
-};
-
-} // namespace SecondNs
-} // namespace MyCompanyLtdLibrary
 
 int main() {
   using namespace MyCompanyLtdLibrary::SecondNs;

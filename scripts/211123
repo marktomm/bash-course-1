@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# this script accepts on user argument
+
+# 1st argument is in variable names $1
+# 2nd argument is in $2
+
+fruit=$1 # apple
+echo $fruit
+
+# definition
+cool_echo() {
+    echo cool $1 # freeze
+    echo $#
+}
+
+# invoke/execute/run
+cool_echo freeze # when i run it here
+
+# the number of argument that were provided - $#
+
+echo $#
+
+# all the arguments as a single string $*
+
+echo $*
+
+echo $USER
+
+# if [ $# -eq 1 ]
+if test $# -eq 1
+then
+    echo "One argument has been provided"
+fi

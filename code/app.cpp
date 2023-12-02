@@ -1,15 +1,28 @@
 #include <iostream>
-#include <random>
-#include <array>
+#include "argparse.hpp"
 
-int main() {
-    std::array<std::string, 3> words = {"apple", "banana", "cherry"};
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<> distr(0, 2);
+namespace ourns {
+    class ourclass {
 
-    std::cout << "Output:" << std::endl;
-    std::cout << words[distr(gen)] << std::endl;
+    };
+}
 
-    return 0;
+int main(int arg_count, char *argument_array[]) {
+    std::cout << argument_array << "\n";
+
+    ourns::ourclass x();
+
+    using namespace argparse;
+    ArgumentParser program("program_name");
+
+    bool res = false;
+    if (res) 
+    {
+        return 0; // this means all good
+    }
+
+    else 
+    {
+        return 128; // this indicates troubles
+    }
 }

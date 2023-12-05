@@ -1,28 +1,41 @@
 #include <iostream>
-#include "argparse.hpp"
+#include <vector> // array like container
+#include <string>
+#include <algorithm>
+#include <iterator>
+#include <fstream>
 
-namespace ourns {
-    class ourclass {
+int main(int argc, char *argv[]) {
+    std::vector<std::string> arguments;
+    std::copy(argv, argv + argc, 
+        std::back_inserter(arguments));
 
-    };
-}
+    std::cout << arguments.size() << "\n";
 
-int main(int arg_count, char *argument_array[]) {
-    std::cout << argument_array << "\n";
+    arguments.push_back("--more-args");
 
-    ourns::ourclass x();
-
-    using namespace argparse;
-    ArgumentParser program("program_name");
-
-    bool res = false;
-    if (res) 
-    {
-        return 0; // this means all good
+    // memory is allocated for the object in memory
+    // and the constructor is called
+    std::ifstream file("./app.conf");
+    if(file.is_open()) {
+        char c = file.get();
+        std::string ts;
+        while(file.good()) {
+            if(c == '\n') {
+                arguments.push_back(ts);
+                ts = "";
+            } else {
+                ts += c;
+            }
+            c = file.get();
+        }
+        if(ts.size()) {
+            arguments.push_back(ts);
+        }
     }
 
-    else 
-    {
-        return 128; // this indicates troubles
+    int i = 1;
+    for(auto elem : arguments) {
+        std::cout << "arg " << i++ << ": " << elem << "\n";
     }
 }

@@ -1,70 +1,84 @@
-#include <vector> // array like container
-// #include <algorithm>
-// #include <iterator>
-
-#include <string>
 #include <iostream>
-#include <fstream>
-
-// class MyType {
-// public:
-//     MyType() {
-//         a = 10;
-//         str_ = "GG";
-//     }
-
-//     MyType(int a) {
-//         a = a;
-//     }
-
-//     MyType(std::string s) {
-//         str_ = s;
-//     }
-
-//     void fn() {
-//         std::cout << a << ": " << str_ << "\n";
-//     }
-
-//     int a{5};
-//     std::string str_;
-// };
+// #include <string>
 
 int main(int argc, char *argv[]) {
-    // MyType x1;
-    // x1.fn();
-    // MyType x2(222);
-    // std::string myData = "have some text";
-    // std::cout << myData;
-    // otherFn(myData);
-    // `file_h` is a handle to the resource that is the open file
-    // std::ifstream file_h("./app.conf"); // OOP. call the ctor.
-    // std::vector<std::string> var_arr;
-    // if(file_h.is_open()) {
-    //     // std::cout << "some text" << var;
-    //     std::string var;
-    //     // file_h >> var;
-    //     // char c_v = file_h.get();
-    //     while(!file_h.eof()) {
-    //         std::getline(file_h, var);
-    //         // std::cout << var << '\n';
-    //         var_arr.push_back(var);
-    //     }
-    // }
+    // std::string yourOwnVariable;
+    // variable decalaration
+    // bool lovesMeOrLovesMeNot; // 1 byte of memory for this variable
+    // the value of this lovesMeOrLovesMeNot boolean type variable
+    // is whatever is in the memory block that was given to the program
 
-    // for(auto iter : var_arr) {
-    //     // std::cout << iter << "\n";
-    // }
+    // RAM 0000 0000 -> false
+    // RAM 0101 0001 -> true
+    
+    //  variable definition
+    bool lovesMeOrLovesMeNot = true; 
+    // the size of the resulting entity      - 1 byte (8 bits)
+    // the valid values that it may have     - true/false
+    // the valid operations that it supports - 
 
-    std::vector<int> vec = { 1, 2, 3, 4, 5 };
-    vec.push_back(6);
-    vec.pop_back();
-
-    for(auto elem : vec) {
-        std::cout << elem << "\n";
+    if(lovesMeOrLovesMeNot != false) {
+    // if(true != false) {
+    // if(true) {
+        std::cout << "I guess that I am fine then\n";
     }
 
-    std::cout << vec[0] << "\n";
+    // unary operator
+    if(!lovesMeOrLovesMeNot) {
+    // if(!true) {
+    // if(false) {
+        std::cout << "I guess that I am fine then also\n";
+    } else {
+        std::cout << "I guess that I am fine then also fix\n";
+    }
 
-    // std::ofstream ofile_h("./hhh");
+    if(!!lovesMeOrLovesMeNot) {
+    // if(!!true) {
+    // if(!false) {
+    // if(true) {
+        std::cout << "I guess that I am fine then also\n";
+    }
+
+    // declaration
+    char symbol; // 1 byte = 0000 0000, 2^8 == 256
+
+    // 0000 0000 - 0
+    // 0000 0001 - 1
+    // 0000 0010 - 2
+    // 0000 0011 - 3
+    // 0000 0100 - 4
+    // 0000 0101 - 5
+    // ...
+    // 0101 1000 - 88
+    // ...
+    // 1111 1110 - 254
+    // 1111 1111 - 255
+
+    symbol = 88; // 0101 1000
+
+    std::cout << symbol << '\n'; // Prints 'X'
+
+    int value = 88; // 4 bytes: xxxx xxxx yyyy yyyy zzzz zzzz 0101 1000
+
+    std::cout << value << '\n'; // Prints '88'
+
+    // pointers, 32 bit / 64 bit 
+
     return 0;
+}
+
+
+// cout.operator<<(value)
+
+// type cout;
+
+// class type {  }
+
+// function overloading
+int fn(int x) {
+    return x;
+}
+
+int fn(char x) {
+    return x;
 }
